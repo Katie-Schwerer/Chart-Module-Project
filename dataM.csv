@@ -1,0 +1,15 @@
+Ind Date Anchor,Ind Date Span,Ind Id,Ind Obs Note,Ind Place,Ind Place Type,Ind Rate Word,ind_selectname,Is projected word,Ind Rate Pct Change,Ind Denom,Ind Num,Ind Rate
+2011,Year,DEATH_ANY_MED_DRUG, ,NC,State,LOW,Death: Overdose Death,,,"9,657,592","1,222",12.7
+2012,Year,DEATH_ANY_MED_DRUG, ,NC,State,LOW,Death: Overdose Death,,3%,"9,749,476","1,278",13.1
+2013,Year,DEATH_ANY_MED_DRUG, ,NC,State,LOW,Death: Overdose Death,,-5%,"9,843,336","1,229",12.5
+2014,Year,DEATH_ANY_MED_DRUG, ,NC,State,LOW,Death: Overdose Death,,9%,"9,932,887","1,355",13.6
+2015,Year,DEATH_ANY_MED_DRUG, ,NC,State,LOW,Death: Overdose Death,,15%,"10,031,646","1,566",15.6
+2016,Year,DEATH_ANY_MED_DRUG, ,NC,State,MIDDLE,Death: Overdose Death,,24%,"10,154,788","1,965",19.4
+2017,Year,DEATH_ANY_MED_DRUG, ,NC,State,MIDDLE,Death: Overdose Death,,24%,"10,268,233","2,474",24.1
+2018,Year,DEATH_ANY_MED_DRUG, ,NC,State,MIDDLE,Death: Overdose Death,,-8%,"10,381,615","2,301",22.2
+2019,Year,DEATH_ANY_MED_DRUG, ,NC,State,MIDDLE,Death: Overdose Death,,1%,"10,488,084","2,352",22.4
+2020,Year,DEATH_ANY_MED_DRUG, ,NC,State,HIGH,Death: Overdose Death,,41%,"10,453,812","3,304",31.6
+2021,Year,DEATH_ANY_MED_DRUG, ,NC,State,HIGH,Death: Overdose Death,,21%,"10,567,100","4,041",38.2
+2022,Year,DEATH_ANY_MED_DRUG, ,NC,State,HIGHEST,Death: Overdose Death,,6%,"10,695,965","4,339",40.6
+2023,Year,DEATH_ANY_MED_DRUG, ,NC,State,HIGHEST,Death: Overdose Death,,1%,"10,835,491","4,442",41
+2024,Year,DEATH_ANY_MED_DRUG,"Partial year: n=2,423 at 10/12 months",NC,State,MIDDLE,Death: Overdose Death,(projected) ,-36%,"11,046,024","2,908",26.3
