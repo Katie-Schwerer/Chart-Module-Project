@@ -18,7 +18,6 @@ function App() {
       skipEmptyLines: true,
       complete: function(result) {
         setData(result.data);
-        console.log(result)
       },
       error: (error) => {
         console.error('Error while parsing CSV:', error.message)
@@ -29,8 +28,9 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <LineChart />
+      <LineChart csvData={data} />
       <TableChart data={data} />
+      <hr />
     </div>
   );
 }
