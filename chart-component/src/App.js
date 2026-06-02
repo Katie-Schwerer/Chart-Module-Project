@@ -5,7 +5,8 @@ import Papa from "papaparse";
 
 import dataCSV from './data_files/dataM.csv';
 
-import LineChart from './components/LineChart';
+import LineChart from './components/Charts/LineChart';
+import BarChart from './components/Charts/BarChart';
 import TableChart from './components/TableChart';
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
       <LineChart csvData={data} />
       <TableChart data={data} />
       <hr />
+
+      <BarChart csvData={data} />
+      <TableChart data={data} />
     </div>
   );
 }

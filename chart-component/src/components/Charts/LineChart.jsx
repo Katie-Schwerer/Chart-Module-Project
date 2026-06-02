@@ -38,7 +38,6 @@ function LineChart({ csvData }) {
         return gradient;
       }
 
-
     const options = {
         responsive: true,
         plugins: {
