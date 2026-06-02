@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Papa from "papaparse";
 
 import dataCSV from './data_files/dataM.csv';
@@ -11,21 +11,20 @@ import TableChart from './components/TableChart';
 function App() {
   const [data, setData] = useState([]);
 
-  const handleDataUpload = () => {
+  useEffect(() => {
     Papa.parse( dataCSV , {
       header: true,
       download: true,
       skipEmptyLines: true,
       complete: function(result) {
-        setData(result);
+        setData(result.data);
+        console.log(result)
       },
       error: (error) => {
         console.error('Error while parsing CSV:', error.message)
       }
     })
-  }
-
-  handleDataUpload();
+  }, []);
 
   return (
     <div className="App">
