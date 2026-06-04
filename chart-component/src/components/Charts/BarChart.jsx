@@ -92,7 +92,7 @@ function BarChart({ csvData }) {
   }, [csvData]);
 
   return (
-    <div className="">
+    <div className="chart-container">
       <Bar options={options} data={data} />
     </div>
   );

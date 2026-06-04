@@ -26,8 +26,9 @@ function TableChart({ data }) {
         <tbody>
             {data.map((item, index) => (
                 <tr key={index}>
-                    <td>{item[header[0]]}</td>
-                    <td>{item[header[1]]}</td>
+                   {header.map((key, i) => (
+                      <td key={i}>{item[key]}</td>
+                   ))}
                 </tr>
             ))}
         </tbody>
