@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import readDataArray from "../data_function";
 
 ChartJS.register(
   CategoryScale,
@@ -23,6 +24,14 @@ ChartJS.register(
 function BarChart({ csvData }) {
   const [labels, setLabels] = useState([]);
   const [datas, setDatas] = useState([]);
+
+  useEffect(() => {
+    if (csvData.length > 0) {
+      const property = Object.getOwnPropertyNames(csvData[0]);
+      setLabels(csvData.map((row) => row[property[0]]));
+      setDatas(readDataArray(csvData, property));
+    }
+  }, [csvData]);
 
   const options = {
     responsive: true,
@@ -74,22 +83,8 @@ function BarChart({ csvData }) {
 
   const data = {
     labels,
-    datasets: [
-      {
-        label: "Data 1",
-        data: datas,
-        backgroundColor: "rgb(53, 162, 235)",
-      },
-    ],
+    datasets: datas,
   };
-
-  useEffect(() => {
-    if (csvData.length > 0) {
-      const property = Object.getOwnPropertyNames(csvData[0]);
-      setLabels(csvData.map((row) => row[property[0]]));
-      setDatas(csvData.map((row) => parseFloat(row[property[1]])));
-    }
-  }, [csvData]);
 
   return (
     <div className="chart-container">

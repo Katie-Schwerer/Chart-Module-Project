@@ -1,5 +1,5 @@
 function readDataArray(data, property) {
-    let color = ["rgb(31, 160, 64)", "rgb(209, 65, 36)", "rgb(0, 114, 209)"];
+    let color = ["rgb(31, 160, 64)", "rgb(209, 65, 36)", "rgb(0, 114, 209)", "#f2c45f", "#800074"];
     let dataset = []
     let index = 0;
 

@@ -5,6 +5,7 @@ import Papa from "papaparse";
 
 import dataCSV from './data_files/dataM.csv';
 import medalsCSV from './data_files/medals.csv';
+import gdpData from './data_files/gdp.csv';
 
 import LineChart from './components/Charts/LineChart';
 import BarChart from './components/Charts/BarChart';
@@ -13,7 +14,8 @@ import StackedBarChart from './components/Charts/StackedBarChart';
 
 function App() {
   const [data, setData] = useState([]);
-  const [medals, setMedals] = useState([])
+  const [medals, setMedals] = useState([]);
+  const [gdp, setGdp] = useState([]);
 
   useEffect(() => {
     Papa.parse( dataCSV , {
@@ -45,6 +47,22 @@ function App() {
     })
   }, [])
 
+  useEffect(() => {
+    Papa.parse(gdpData, {
+      header: true,
+      download: true,
+      skipEmptyLines: true,
+      complete: function(result) {
+        console.log(result.data)
+        setGdp(result.data);
+      }, 
+      error: (error) => {
+        console.error('Error while parsing CSV:', error.message)
+      }
+      
+    })
+  }, [])
+
   return (
     <div className="App">
       <h1>Hello World</h1>
@@ -58,6 +76,9 @@ function App() {
 
       <StackedBarChart  csvData={medals} />
       <TableChart data={medals} />
+
+      <BarChart csvData={gdp} />
+      <TableChart data={gdp} />
     </div>
   );
 }
