@@ -10,6 +10,7 @@ import LineChart from './components/Charts/LineChart';
 import BarChart from './components/Charts/BarChart';
 import TableChart from './components/TableChart';
 import StackedBarChart from './components/Charts/StackedBarChart';
+import ButterflyChart from './components/Charts/ButterflyChart';
 
 function App() {
   const [data, setData] = useState([]);
@@ -58,6 +59,9 @@ function App() {
 
       <StackedBarChart  csvData={medals} />
       <TableChart data={medals} />
+      <hr />
+
+      <ButterflyChart />
     </div>
   );
 }
